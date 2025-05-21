@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295259716898",
+    "project_id": "codeconnect-f672f",
+    "storage_bucket": "codeconnect-f672f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295259716898:android:ca5169ec05aba210b3797b",
+        "android_client_info": {
+          "package_name": "com.example.nitd_code"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtY3kxPHUMkGnLlhbOnbt_uIrZLxyu5_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

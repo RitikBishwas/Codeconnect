@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/" />
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="nitd_code">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>nitd_code</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = null;
+  </script>
+
+  <!-- ✅ JavaScript for TTS (Web) -->
+  <script>
+    window.flutterTts = {
+      speak: function (text) {
+        if ('speechSynthesis' in window) {
+          const synth = window.speechSynthesis;
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = 'en-US'; // Set language to English
+          utterance.rate = 1.0; // Adjust speech rate if needed
+          synth.speak(utterance);
+        } else {
+          console.error('SpeechSynthesis API not supported in this browser.');
+        }
+      },
+    };
+
+    // ✅ Example Usage: Uncomment this to test immediately
+    // window.flutterTts.speak('Welcome to AI Interview');
+  </script>
+
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js and load Flutter application
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
